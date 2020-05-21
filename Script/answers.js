@@ -11,7 +11,8 @@ window.onload = () => {
         HTTP.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 let details = JSON.parse(HTTP.responseText)
-                console.log(details);
+                No_que =details[0].Questions.length;
+                console.log(No_que)
                 let ques = details.reduce((acc, curr) => {
                     return curr.Questions
                 }, {})
@@ -42,7 +43,7 @@ window.onload = () => {
                     cardtitle.innerText = Object.keys(q)[0]
 
                     Currans.forEach((a) => {
-
+   
                         let button = document.createElement("button");
                         button.innerText = a;
                         button.className = "button";
@@ -67,8 +68,8 @@ window.onload = () => {
                         let score = document.getElementById("score")
                         score.onclick = function () {
 
-                            perfect.innerText = scores[scores.length - 1]
-                            let scor = scores[scores.length - 1]
+                            perfect.innerText = `${scores[scores.length - 1]}/${No_que}`
+                            let scor = `${scores[scores.length - 1]}/${No_que}`
                             console.log(scor)
 
                             let xhr = new XMLHttpRequest();
@@ -83,11 +84,9 @@ window.onload = () => {
                         function check() {
                             let value = document.getElementsByClassName("button")
                             answers = (Object.values(value))
-                            console.log(answers)
 
                             answers.forEach(function (i) {
                                 if (i.value === Object.values(q)[0]) {
-                                    console.log(answers.indexOf(i))
                                     answers[answers.indexOf(i)].style.color = "green";
                                     answers[answers.indexOf(i)].disabled = "disabled";
 
