@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="./quizz.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-style navbar-dark bg-dark">
+      <div class="navbar-header ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarid"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href=""><img class="logo" src="./undraw_new_ideas_jdea.svg"></a>
+      </div>
+      <div class="collapse navbar-right navbar-collapse" id="navbarid">
+        <h3 id="name"></h3>
+        <ul class="navbar-nav ml-auto navrbar-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Login/index.html">Exit</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <p class="italic">The earth is made of different continents that have outstanding marvels, for example, Mt. Everest
+      and the pyramids. How much information do you know the out earth and the features that some of the countries boast
+      of having? Test your general knowledge by taking the quiz below. Good luck, and have fun!</p>
+    <div class="parallax"></div>
+
+    <p class="italic" style="justify-content: center">Play our curated questions and answers and find out your knowledge
+      ? Care to Play !!!</p>
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <div class="card">
+          <div id="card-container">
+
+          </div>
+        </div>
+
+        <div id="circle">
+          <button type="submit" id="score" class="brk-btn">Score</button>
+
+        </div>
+        <button type="submit" id="play" onclick="play()"
+          class="btn btn-mixed btn-block text-uppercase rounded-pill shadow-sm">Play</button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="../../Script/answers.js"></script>
+</body>
+
+</html>

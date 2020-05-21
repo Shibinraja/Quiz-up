@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./admin.css">
+  <link rel="stylesheet" href="./check.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <style>
+    @media only screen and (max-width:1000px) {
+      .banner-text p {
+        display: none;
+      }
+
+      .navbar-dark {
+        background-color: #333;
+      }
+
+      .text-area {
+        font-size: 35px;
+      }
+
+      #ques {
+        font-size: 25px;
+        /* margin-top: 150px; */
+
+
+      }
+
+      ._checkbox {
+        top: 75%;
+        position: relative;
+      }
+
+      h4 {
+        font-size: 17px;
+      }
+
+      .box label {
+        font-size: 20px
+      }
+
+      .banner-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        position: relative;
+
+      }
+
+      h3 {
+        margin-left: 2px
+      }
+    }
+  </style>
+</head>
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+      <a class="navbar-brand" href="#">Test Press</a>
+      <h3 id="name"></h3>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" id="exited" href="../Login/index.html">Exit</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+  </header>
+
+  <content>
+    <div class="container-fluid">
+      <div class="row">
+        <h2 id="ques">Select the pattern of your question here:</h2>
+        <div class="col-md-6 col-sm-3 que">
+          <div class="_checkbox">
+
+            <h4>DIFFICULTY:</h4>
+            <div class="box">
+              <input type="radio" id="Easy" name="diff" class="message" value="easy">
+              <span class="check"></span>
+              <label for="Easy">Easy</label>
+            </div>
+
+            <div class="box">
+              <input type="radio" id="Medium" name="diff" class="message" value="medium">
+              <span class="check"></span>
+              <label for="Medium">Medium</label>
+            </div>
+
+            <div class="box">
+              <input type="radio" id="Hard" name="diff" class="message" value="hard">
+              <span class="check"></span>
+              <label for="Hard">Hard</label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6 col-sm-6 que2">
+          <div class="_checkbox">
+
+            <h4>TYPE:</h4>
+            <div class="box">
+              <input type="radio" id="multiple" name="type" class="message" value="multiple">
+              <span class="check"></span>
+              <label for="multiple">Multiple Choice</label>
+            </div>
+
+            <div class="box">
+              <input type="radio" id="truf" name="type" class="message" value="boolean">
+              <span class="check"></span>
+              <label for="truf">True/False</label>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+  </content>
+
+  <div class="container">
+    <div class="col-md-3 offset-md-5 col-sm-6  offset-sm-5 col-xs-6 offset-sm-6 my-4">
+      <div class="row">
+        <p class="banner-btn">
+          <button id="submit" type="submit">Generate</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="../../Script/index.js"></script>
+  <script type="text/javascript"> window.history.forward();
+    function noBack() { window.history.forward(1); }</script>
+
+
+</body>
+
+</html>

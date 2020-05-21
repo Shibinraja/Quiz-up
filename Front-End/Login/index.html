@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testpress</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+            <div class="col-md-6 bg-light ">
+                <div class="login d-flex align-items-center py-5">
+
+                    <div class="container">
+                        <div class="row">
+                            <img id="avatar" src="./undraw_profile_pic_ic5t.svg">
+                            <div class="col-lg-10 col-xl-7 mx-auto">
+                                <h3 class="display-4">Welcome</h3>
+                                <p class="text-muted mb-4">Enter into your Portal !!!</p>
+
+                                <div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputemail" type="email" placeholder="Email address" required=""
+                                            autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <input id="inputpassword" type="password" placeholder="Password" required=""
+                                            class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    </div>
+
+                                    <button type="submit" id="signin" onclick='submit("signin")'
+                                        class="btn btn-mixed btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign
+                                        In</button>
+                                </div>
+
+                                <p class="my-3">Don't have an account? <a id="login" href="#">Register Here</a></p>
+
+
+                                <div class="social-buttons">
+                                    <a href="http://www.facebook.com" target="_blank"
+                                        class="social-buttons__button social-button social-button--facebook"
+                                        aria-label="Facebook">
+                                        <span class="social-button__inner">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </span>
+                                    </a>
+                                    <a href="http://www.linkedin.com" target="_blank"
+                                        class="social-buttons__button social-button social-button--linkedin"
+                                        aria-label="LinkedIn">
+                                        <span class="social-button__inner">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </span>
+                                    </a>
+                                    <a href="http://www.twitter.com" target="_blank"
+                                        class="social-buttons__button social-button social-button--twitter"
+                                        aria-label="Twitter">
+                                        <span class="social-button__inner">
+                                            <i class="fab fa-twitter"></i>
+                                        </span>
+                                    </a>
+                                    <a href="http://www.github.com" target="_blank"
+                                        class="social-buttons__button social-button social-button--github"
+                                        aria-label="GitHub">
+                                        <span class="social-button__inner">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="regform">
+
+                <h1>Registration Form</h1>
+                <i class=" close far fa-times-circle"></i>
+
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="regname" placeholder="Username" value="" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-calendar-day"></i>
+                    <input type="date" id="dob" placeholder="Date of Birth" name="" value="">
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-at"></i>
+                    <input type="email" id="mail" placeholder="Email ID" name="" value="" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="pass" placeholder="Enter your Password" name="" value="" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="confirm" onchange="check()" placeholder="Re-Enter your Password" name=""
+                        value="" required>
+                </div>
+
+                <div class="textbox">
+                    <label for="gender">Gender</label>
+
+                    <select id="position">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+
+                <div class="textbox">
+                    <label for="postiton">Profession</label>
+
+                    <select id="profession">
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="reg" onclick='submit("reg")' class="myButton">Submit</button>
+
+            </div>
+
+
+            <script type="text/javascript">
+                document.getElementById('login').addEventListener('click', function () {
+                    document.querySelector('.regform').style.display = 'inline'
+                })
+                document.querySelector('.close').addEventListener('click', function () {
+                    document.querySelector('.regform').style.display = 'none'
+                });
+
+                window.history.forward();
+                function noBack() { window.history.forward(1); }
+            </script>
+            <script type="text/javascript" src="../../Script/Reg-log.js"></script>
+</body>
+
+</html>

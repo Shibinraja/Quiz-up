@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+body{
+    margin: 0;
+    padding:0;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./1567666.png");
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position:center center;
+}
+content{
+    top:0;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.que{
+    margin-top:15%;
+    color:whitesmoke;
+}
+
+
+.que2{
+    margin-top:15%;
+    color:whitesmoke;
+    align-items:center;
+}
+
+#ques{
+    color:#fed136;
+    font-size:50px;
+    position:absolute;
+    top:15%
+    
+}
+
+.navbar-brand{
+    font-family: big john 
+}
+
+.nav-link{
+    font-family:poppins;
+    text-transform: uppercase;
+}
+
+.banner-btn{
+    margin-top:75px;
+}
+
+.banner-btn #submit{
+    border: 1px solid #fff;
+    border-radius:50px;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:10px 50px;
+    display:inline-block;
+    margin-top:15px; 
+    color:#fff
+}
+
+.banner-btn #submit{
+    background:#fed136;
+    border-color:#fed136;
+    color:#000;
+}
+
+h4{
+    
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    top:10%;
+    font-size:25px;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight:bold;
+    color:white;
+    margin-top:3px;
+    margin-left:45px
+}
+
+
+  
+
+
+
+

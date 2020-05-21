@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.navbar-style{
+    box-shadow: 0 5px 10px #efefef;
+    text-transform:uppercase;
+}
+
+.logo{
+    height:65px;
+    padding:2px 10px;
+}
+
+li a{
+    color:#333;
+}
+
+.btn-mixed{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 59%, rgba(252,176,69,1) 100%);
+    position: fixed;
+    right: 15px;
+    top: 225px;
+    transition: all 0.2s ease-in 0s;
+    z-index: 9999;
+    cursor: pointer;
+    width:15%
+}
+.btn-mixed:hover {
+    right: 50px;
+    }
+
+.parallax{
+    background:url("./emily-morter-8xAA0f9yQnE-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height:500px;
+    width:100%
+
+}
+.italic{
+    font-family: 'Tangerine', cursive;
+    font-size:40px;
+    display:flex;
+}
+
+.card{
+margin-bottom: 10px;
+}
+
+h3 {
+    font-weight:bold;
+    color:white;
+    margin-top:1%;
+    margin-left:95px
+}
+
+h4{
+    font-weight:bold;
+    position: relative;
+    margin:23px;
+
+}
+
+/* Button */
+
+.button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: inline;
+    align-self: center;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+.button {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+.button:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.card-header{
+    background-color: grey;
+}
+
+#circle {
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 5px solid;
+    margin-left: 40%;
+    align-content: center;
+    display:flex;
+}
+
+.brk-btn {
+    position: relative;
+    background: none;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid red;
+    padding: 0.5em 1em;
+    height:50px;
+    width: 120px;
+    top:20%;
+    margin-left:-327%
+  }
+  .brk-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .brk-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .brk-btn:hover::before {
+    right: 80%;
+  }
+  .brk-btn:hover::after {
+    left: 80%;
+  }
+
+  @media (max-width:600px) {
+      .brk-btn{
+          margin-left:-140px;
+          top:25%
+      }
+
+      h3{
+        margin-left:2px;
+        font-size:large;
+        margin-top:12px;
+    }
+
+    h4{
+        margin:6px;
+        margin-top:23px
+    }
+  }
