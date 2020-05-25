@@ -43,7 +43,7 @@ window.onload = () => {
                 //  Storing the selected question in db
 
                 let xhr = new XMLHttpRequest();
-                xhr.open('POST', "/questions");
+                xhr.open('POST', "http://localhost:8080/questions");
                 xhr.setRequestHeader('Content-Type', "application/json");
                 xhr.send(JSON.stringify(json))
             }

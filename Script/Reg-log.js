@@ -20,7 +20,7 @@ function submit(id) {
         let details = ({ "Email": loginid.value, "Password": passwordid.value });
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/login", true);
+        xhr.open("POST", "http://localhost:8080/login", true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send(JSON.stringify(details));
 
@@ -50,7 +50,7 @@ function submit(id) {
         let json = ({ "Username": user.value, "DOB": dob.value, "Email": email.value, "Password": password.value, "Position": position.value, "Profession": profession.value })
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http:/localhost:8080/registration", true)
+        xhr.open("POST", "http://localhost:8080/registration", true)
         xhr.setRequestHeader("content-type", "application/json");
         xhr.send(JSON.stringify(json));
 

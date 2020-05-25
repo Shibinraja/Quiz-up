@@ -73,7 +73,7 @@ window.onload = () => {
                             console.log(scor)
 
                             let xhr = new XMLHttpRequest();
-                            xhr.open("POST", "/scores", true);
+                            xhr.open("POST", "http://localhost:8080/scores", true);
                             xhr.setRequestHeader("Content-type", "application/json");
                             xhr.send(JSON.stringify({ username, scor }));
                             score.disabled = "disabled";
@@ -106,7 +106,7 @@ window.onload = () => {
 
             }
         }
-        HTTP.open("GET", "/answers", true)
+        HTTP.open("GET", "http://localhost:8080/answers", true)
         HTTP.send()
 
         play.disabled = "disabled";
