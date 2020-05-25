@@ -20,7 +20,7 @@ function submit(id) {
         let details = ({ "Email": loginid.value, "Password": passwordid.value });
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http:/localhost:8080/login", true);
+        xhr.open("POST", "/login", true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send(JSON.stringify(details));
 

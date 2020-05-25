@@ -10,7 +10,7 @@ const path = require("path");
 
 app.use(cors());
 app.use(BodyParser.json());
-app.use(express.static(path.join(__dirname, "../Login")))
+app.use(express.static(path.join(__dirname, "Front-End")))
 
 const PORT = process.env.PORT || 8080;
 
@@ -154,7 +154,7 @@ app.post("/scores", (req, res) => {
 
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Login", "index.html"))
+    res.sendFile(path.join(__dirname,"Front-End","Login", "index.html"))
 });
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`))
